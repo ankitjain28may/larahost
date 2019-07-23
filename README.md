@@ -44,4 +44,4 @@ It requires nginx to be installed in the system.
 
 ## License
 
->Copyright (c) 2017 Ankit Jain - Released under the MIT License
+>Copyright (c) 2019 Ankit Jain - Released under the MIT License
