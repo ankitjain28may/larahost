@@ -2,10 +2,11 @@
     "name": "ankitjain28may/larahost",
     "description": "Create a Virtualhost in nginx during laravel project creation",
     "keywords": ["laravel"],
-    "type": "composer-plugin",
+    "type": "library",
     "require": {
         "laravel/installer": "^2.1",
-        "symfony/console": "~3.0|~4.0"
+        "symfony/console": "~3.0|~4.0",
+        "ankitjain28may/larahost": "^1.0"
     },
     "license": "MIT",
     "autoload": {
