@@ -1,0 +1,25 @@
+{
+    "name": "ankitjain28may/larahost",
+    "description": "Create a Virtualhost in nginx during laravel project creation",
+    "keywords": ["laravel"],
+    "type": "composer-plugin",
+    "require": {
+        "laravel/installer": "^2.1",
+        "symfony/console": "~3.0|~4.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ankitjain28may\\Larahost\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ankit Jain",
+            "email": "ankitjain28may77@gmail.com"
+        }
+    ],
+    "bin": [
+        "larahost"
+    ]
+}
