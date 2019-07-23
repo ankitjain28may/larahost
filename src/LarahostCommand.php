@@ -37,7 +37,5 @@ class LarahostCommand extends NewCommand
         $process->run(function ($type, $line) use ($output) {
             $output->write($line);
         });
-
-        $output->writeln('<comment>Application is running at http://' . $name . '.local</comment>');
     }
 }
