@@ -19,7 +19,9 @@
             "email": "ankitjain28may77@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "bin": [
         "larahost"
-    ]
+    ],
+    "prefer-stable": true
 }
