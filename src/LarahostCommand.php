@@ -8,7 +8,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Process\Process;
 
 class LarahostCommand extends NewCommand
-{   
+{
+
     /**
      * Execute the command.
      *

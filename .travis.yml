@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 7.1
+
+before_install:
+  - composer install --dev --ignore-platform-reqs
+  - composer require "squizlabs/php_codesniffer=*"
+script:
+  - mkdir -p build/logs
+  - php vendor/bin/phpcbf --standard=PSR2 src larahost
+  - php vendor/bin/phpcs --standard=PSR2 src larahost
+
+after_script:
+  - php vendor/bin/coveralls -v

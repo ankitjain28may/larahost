@@ -1,4 +1,5 @@
 # Larahost
+[![Build Status](https://travis-ci.org/ankitjain28may/larahost.svg?branch=master)](https://travis-ci.org/ankitjain28may/larahost)
 [![Latest Stable Version](https://poser.pugx.org/ankitjain28may/larahost/v/stable)](https://packagist.org/packages/ankitjain28may/larahost)
 [![Packagist](https://img.shields.io/packagist/dt/ankitjain28may/larahost.svg?style=flat-square)](https://packagist.org/packages/ankitjain28may/larahost)
 
