@@ -23,9 +23,8 @@ class LarahostCommand extends NewCommand
 
         $directory = ($input->getArgument('name')) ? getcwd().'/'.$input->getArgument('name') : getcwd();
         $name = $input->getArgument('name');
-        echo __DIR__;
         $commands = [
-            __DIR__.'/nginx.sh ' . $name,
+            __DIR__.'/../nginx.sh ' . $name,
         ];
 
         $process = new Process(implode(' && ', $commands), $directory, null, null, null);
