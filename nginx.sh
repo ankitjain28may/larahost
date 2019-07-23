@@ -16,6 +16,11 @@ White='\033[0;37m'        # White
 SERVER_ALIAS=$1;
 FOLDER_DIR=$(pwd)
 
+if [ "$SERVER_ALIAS" == "" ]
+then
+SERVER_ALIAS=$(echo "${PWD##*/}")
+fi
+
 check_host() {
     ip=$(grep $SERVER_ALIAS'.local' /etc/hosts | awk '{print $1}')
     if [ "$ip" != "127.0.0.1" ]
