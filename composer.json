@@ -4,7 +4,7 @@
     "keywords": ["laravel"],
     "type": "library",
     "require": {
-        "laravel/installer": "v3.0.1",
+        "laravel/installer": "v4.*",
         "symfony/console": "~5.0"
     },
     "license": "MIT",

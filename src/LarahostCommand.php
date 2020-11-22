@@ -39,12 +39,18 @@ class LarahostCommand extends NewCommand
         parent::execute($input, $output);
         $output->writeln('<info>Adding Nginx VirtualHost...</info>');
 
-        $directory = ($input->getArgument('name')) ? getcwd().'/'.$input->getArgument('name') : getcwd();
         $name = $input->getArgument('name');
-        array_push($this->commands, $name);
-        $process = new Process($this->commands, $directory, null, null, null);
 
-        if ('\\' !== DIRECTORY_SEPARATOR && file_exists('/dev/tty') && is_readable('/dev/tty')) {
+        if ($input->getOption('jet')) {
+            # Since we are running chdir for jetstream applications
+            # https://github.com/laravel/installer/blob/95885a0bbae9940a0e9e8530610f030e2e874a8a/src/NewCommand.php#L146
+            $directory = $name !== '.' ? getcwd() : '.';
+        } else {
+            $directory = $name !== '.' ? getcwd().'/'.$name : '.';
+        }
+
+        $process = Process::fromShellCommandline(implode(' && ', $this->commands), $directory, null, null, null);
+        if ('\\' !== DIRECTORY_SEPARATOR && file_exists('/de(v/tty') && is_readable('/dev/tty')) {
             $process->setTty(true);
         }
 
