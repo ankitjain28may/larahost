@@ -48,7 +48,7 @@ class LarahostCommand extends NewCommand
         } else {
             $directory = $name !== '.' ? getcwd().'/'.$name : '.';
         }
-
+        $this->commands[0] = $this->commands[0] . " " . $name;
         $process = Process::fromShellCommandline(implode(' && ', $this->commands), $directory, null, null, null);
         if ('\\' !== DIRECTORY_SEPARATOR && file_exists('/de(v/tty') && is_readable('/dev/tty')) {
             $process->setTty(true);

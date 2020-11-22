@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## [v3.1.0](https://github.com/ankitjain28may/larahost/releases/tag/v3.0.0) - 2020-11-22
+
+### Changed
+
+- Added PHP version 7.3 for travis checks
+- Update the /etc/hosts entry with "_1" if name is already present.
+
+
 ## [v3.0.0](https://github.com/ankitjain28may/larahost/releases/tag/v3.0.0) - 2020-11-22
 
 ### Changed

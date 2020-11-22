@@ -23,18 +23,14 @@ fi
 
 check_host() {
     ip=$(grep $SERVER_ALIAS'.local' /etc/hosts | awk '{print $1}')
-    if [ "$ip" != "127.0.0.1" ]
+    if [ "$ip" == "127.0.0.1" ]
     then
-        sudo -- sh -c "echo 127.0.0.1    $SERVER_ALIAS.local >> /etc/hosts"
+        printf "${Red}It is already defined in /etc/hosts, Changing it to ${SERVER_ALIAS}_1 from ${SERVER_ALIAS}${Color_Off}\n"
+        # Since `read` is not working along with Process function for user input.
+        SERVER_ALIAS=${SERVER_ALIAS}_1
+        check_host
     else
-        printf "${Red}It is already defined in /etc/hosts, Do you want to continiue? Press [y/n]:${Color_Off}" 
-        read -p " " option
-        if [ "$option" != "y" ]
-        then
-            printf "${Blue}Enter the host name:${Color_Off}"
-            read -p " " SERVER_ALIAS
-            check_host
-        fi
+        sudo -- sh -c "echo 127.0.0.1    $SERVER_ALIAS.local >> /etc/hosts"
     fi
    
 }
